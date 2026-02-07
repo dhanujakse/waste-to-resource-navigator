@@ -1,0 +1,17 @@
+streamlit
+langchain
+openai
+google-generativeai
+langchain-google-genai
+langchain-pinecone
+pinecone
+python-dotenv
+PyPDF2
+pdfplumber
+tiktoken
+requests
+geopy
+numpy
+pandas
+pillow
+streamlit-geolocation

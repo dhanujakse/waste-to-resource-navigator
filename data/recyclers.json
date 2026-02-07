@@ -1,0 +1,256 @@
+[
+  {
+    "id": "recycler_001",
+    "name": "GreenCycle India Pvt Ltd",
+    "location": {
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110020",
+      "latitude": 28.6139,
+      "longitude": 77.2090
+    },
+    "address": "Plot 12, Sector 12, Dwarka, New Delhi",
+    "materials": ["PET", "HDPE", "LDPE", "PP", "PS", "Cardboard", "Paper"],
+    "rates": {
+      "PET": 45,
+      "HDPE": 38,
+      "LDPE": 25,
+      "PP": 30,
+      "PS": 20,
+      "Cardboard": 8,
+      "Paper": 5
+    },
+    "capacity": "15 tons/day",
+    "services": ["Collection", "Processing", "Buyback"],
+    "certifications": ["CPCB Certified", "ISO 14001"],
+    "contact": {
+      "phone": "+91-11-25678901",
+      "email": "delhi@greencycle.in",
+      "website": "www.greencycle.in"
+    },
+    "operating_hours": "Mon-Sat: 8AM-6PM",
+    "payment_terms": "Cash on delivery"
+  },
+  {
+    "id": "recycler_002",
+    "name": "EcoWaste Solutions",
+    "location": {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400078",
+      "latitude": 19.0760,
+      "longitude": 72.8777
+    },
+    "address": "Unit 5, Industrial Estate, Andheri East, Mumbai",
+    "materials": ["PET", "HDPE", "PP", "Electronics", "Metal", "Glass"],
+    "rates": {
+      "PET": 42,
+      "HDPE": 35,
+      "PP": 28,
+      "Electronics": 150,
+      "Metal": 60,
+      "Glass": 12
+    },
+    "capacity": "20 tons/day",
+    "services": ["Collection", "Processing", "Buyback", "E-waste"],
+    "certifications": ["Maharashtra PCB Approved", "E-waste Authorized"],
+    "contact": {
+      "phone": "+91-22-26874532",
+      "email": "mumbai@ecowaste.co.in",
+      "website": "www.ecowaste.co.in"
+    },
+    "operating_hours": "24/7 Collection, Processing Mon-Sat 8AM-8PM",
+    "payment_terms": "Bank transfer or cash"
+  },
+  {
+    "id": "recycler_003",
+    "name": "ReCycloPedia",
+    "location": {
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560066",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "address": "123, Tech Park Road, Whitefield, Bangalore",
+    "materials": ["Plastic", "Paper", "Cardboard", "Organic", "Electronics"],
+    "rates": {
+      "PET": 40,
+      "HDPE": 32,
+      "PP": 25,
+      "Paper": 6,
+      "Cardboard": 7,
+      "Organic": 3,
+      "Electronics": 200
+    },
+    "capacity": "12 tons/day",
+    "services": ["Door-to-door collection", "Processing", "Buyback", "Composting"],
+    "certifications": ["Karnataka State PCB", "Waste Picker Partnership"],
+    "contact": {
+      "phone": "+91-80-41234567",
+      "email": "bangalore@recyclopedia.com",
+      "website": "www.recyclopedia.com"
+    },
+    "operating_hours": "Mon-Sun: 7AM-8PM",
+    "payment_terms": "Instant payment via UPI or cash"
+  },
+  {
+    "id": "recycler_004",
+    "name": "Clean India Recycling",
+    "location": {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600097",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "address": "No. 45, Guindy Industrial Estate, Chennai",
+    "materials": ["PET", "HDPE", "LDPE", "PP", "PS", "PVC", "Metal", "Glass"],
+    "rates": {
+      "PET": 43,
+      "HDPE": 36,
+      "LDPE": 22,
+      "PP": 29,
+      "PS": 18,
+      "PVC": 15,
+      "Metal": 55,
+      "Glass": 10
+    },
+    "capacity": "18 tons/day",
+    "services": ["Bulk collection", "Processing", "Buyback", "Industrial recycling"],
+    "certifications": ["TNPCB Certified", "Green Business Certified"],
+    "contact": {
+      "phone": "+91-44-22345678",
+      "email": "chennai@cleanindia.in",
+      "website": "www.cleanindia.in"
+    },
+    "operating_hours": "Mon-Fri: 8AM-7PM, Sat: 8AM-2PM",
+    "payment_terms": "Cash or cheque"
+  },
+  {
+    "id": "recycler_005",
+    "name": "HazardFree Waste Management",
+    "location": {
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110020",
+      "latitude": 28.5355,
+      "longitude": 77.3910
+    },
+    "address": "Block C, Okhla Industrial Area, New Delhi",
+    "materials": ["Hazardous Chemicals", "Medical Waste", "Batteries", "E-waste", "Pesticides"],
+    "rates": {
+      "Hazardous Chemicals": 25,
+      "Medical Waste": 40,
+      "Batteries": 15,
+      "E-waste": 30,
+      "Pesticides": 50
+    },
+    "capacity": "Specialized handling - 2 tons/day",
+    "services": ["Hazardous collection", "Safe disposal", "Documentation", "Compliance reporting"],
+    "certifications": ["CPCB Hazardous Waste Authorized", "Bio-medical Waste Approved"],
+    "contact": {
+      "phone": "+91-11-26978901",
+      "email": "hazardous@hazardfree.co.in",
+      "website": "www.hazardfree.co.in"
+    },
+    "operating_hours": "Mon-Fri: 9AM-5PM (Emergency 24/7)",
+    "payment_terms": "Invoice-based with compliance documentation"
+  },
+  {
+    "id": "recycler_006",
+    "name": "SmartKarma Recycling",
+    "location": {
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500082",
+      "latitude": 17.3850,
+      "longitude": 78.4867
+    },
+    "address": "Survey No. 128, IDA Jeedimetla, Hyderabad",
+    "materials": ["All Plastic Types", "Paper", "Metal", "Glass", "Textile"],
+    "rates": {
+      "PET": 41,
+      "HDPE": 34,
+      "LDPE": 23,
+      "PP": 27,
+      "PS": 19,
+      "Paper": 5.5,
+      "Metal": 58,
+      "Glass": 9,
+      "Textile": 2
+    },
+    "capacity": "25 tons/day",
+    "services": ["Pickup service", "Processing", "Buyback", "Corporate tie-ups"],
+    "certifications": ["TS PCBS Certified", "Start-up India Recognized"],
+    "contact": {
+      "phone": "+91-40-23456789",
+      "email": "hyderabad@smartkarma.co.in",
+      "website": "www.smartkarma.co.in"
+    },
+    "operating_hours": "Mon-Sat: 8AM-6PM",
+    "payment_terms": "Immediate cash or bank transfer"
+  },
+  {
+    "id": "recycler_007",
+    "name": "Kalinga Paper & Plastic Recyclers",
+    "location": {
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "pincode": "751001",
+      "latitude": 20.2961,
+      "longitude": 85.8245
+    },
+    "address": "Chandrasekharpur Industrial Area, Bhubaneswar",
+    "materials": ["Paper", "Cardboard", "PET", "PP", "PP", "Newspaper"],
+    "rates": {
+      "Paper": 6.5,
+      "Cardboard": 7.5,
+      "PET": 39,
+      "PP": 26,
+      "Newspaper": 4
+    },
+    "capacity": "8 tons/day",
+    "services": ["Collection", "Processing", "Buyback"],
+    "certifications": ["Odisha State PCB", "MSME Registered"],
+    "contact": {
+      "phone": "+91-674-2345678",
+      "email": "bbsr@kalingarecyclers.in",
+      "website": "www.kalingarecyclers.in"
+    },
+    "operating_hours": "Mon-Sat: 7AM-5PM",
+    "payment_terms": "Cash payment"
+  },
+  {
+    "id": "recycler_008",
+    "name": "Goa Green Recyclers",
+    "location": {
+      "city": "Panaji",
+      "state": "Goa",
+      "pincode": "403001",
+      "latitude": 15.4909,
+      "longitude": 73.8278
+    },
+    "address": "Near Mormugao Port Trust, Vasco-da-Gama, Goa",
+    "materials": ["Plastic", "Metal", "Glass", "Tyres", "Marine waste"],
+    "rates": {
+      "PET": 44,
+      "HDPE": 37,
+      "PP": 31,
+      "Metal": 65,
+      "Glass": 11,
+      "Tyres": 8,
+      "Marine waste": 5
+    },
+    "capacity": "10 tons/day",
+    "services": ["Coastal cleanup", "Marine waste processing", "Regular recycling"],
+    "certifications": ["Goa State PCB", "Coastal Regulation Zone Compliant"],
+    "contact": {
+      "phone": "+91-832-2432109",
+      "email": "goa@gogreenrecycle.com",
+      "website": "www.gogreenrecycle.com"
+    },
+    "operating_hours": "Mon-Sun: 8AM-6PM",
+    "payment_terms": "Cash or digital payment"
+  }
+]
