@@ -212,26 +212,6 @@ streamlit run app/main.py
 ✅ **CPCB Compliance**: Explicit handling of 2016 Waste Management Rules  
 ✅ **Accessibility**: Hindi/English interface for Indian users  
 
-## 🎥 Demo Video Script
-
-### 0:00-0:30: Problem Introduction
-> "India generates 62 million tonnes of waste annually, with only 28% processed. Let's bridge the gap with AI."
-
-### 0:30-1:00: Safe Material Flow
-> "Upload an image of a PET bottle. Our GPT-4o Vision identifies it as PET plastic with 95% confidence. Safety check shows green - safe for recycling."
-
-### 1:00-1:30: Hazardous Material Flow
-> "Now upload a chemical container. The system detects hazardous material, triggers red alert, and displays emergency protocols."
-
-### 1:30-2:00: Compliance Information
-> "CPCB guidelines for chemical waste disposal are instantly retrieved from our vector database."
-
-### 2:00-2:30: Resource Matching
-> "Local hazardous waste specialists are identified with contact information."
-
-### 2:30-3:00: EPR Dashboard
-> "Track Extended Producer Responsibility compliance for your organization."
-
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
