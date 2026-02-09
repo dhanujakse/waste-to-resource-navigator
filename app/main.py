@@ -51,6 +51,8 @@ if "user_lon" not in st.session_state:
     st.session_state.user_lon = None
 if "gps_error" not in st.session_state:
     st.session_state.gps_error = ""
+if "show_raw_json" not in st.session_state:
+    st.session_state.show_raw_json = False
 
 
 def _validate_lat_lon(lat, lon):
@@ -96,6 +98,7 @@ def main():
         st.header(translate_text("settings", st.session_state.get("lang", "en")))
         _ = st.checkbox(translate_text("api_keys_config", st.session_state.get("lang", "en")), value=True)
         st.text_input("City (optional)", key="user_city")
+        st.checkbox("Show raw JSON output", key="show_raw_json")
 
         if streamlit_geolocation is None:
             st.info("Location auto-detect requires streamlit-geolocation.")
@@ -189,12 +192,24 @@ def main():
                 st.success(f"**Impact Insight:** {nudge}")
 
             if st.session_state.material_analysis.get("analysis_source") == "fallback":
-                st.warning("Image analysis used fallback mode. Check Gemini API key or quota.")
+                st.warning("Image analysis used fallback mode. Check OpenRouter API key or quota.")
 
             with st.container():
                 render_material_info(st.session_state.material_analysis)
                 render_safety_guidelines(st.session_state.safety_assessment)
                 render_compliance_info(st.session_state.compliance_info)
+
+            # 3b. Clear Instructions
+            instructions = st.session_state.system_output.get("instructions", [])
+            do_not = st.session_state.system_output.get("do_not", [])
+            if instructions:
+                st.subheader("What To Do")
+                for step in instructions:
+                    st.write(f"- {step}")
+            if do_not:
+                st.subheader("What Not To Do")
+                for item in do_not:
+                    st.write(f"- {item}")
 
             st.subheader(translate_text("recycling_options", st.session_state.get("lang", "en")))
             render_recycler_options(st.session_state.get("nearby_options", []))
@@ -219,8 +234,9 @@ def main():
                 st.subheader("Nearby Recyclers Map")
                 st.map(pd.DataFrame(map_points), latitude="lat", longitude="lon")
 
-            st.subheader("System Output (JSON)")
-            st.code(json.dumps(st.session_state.get("system_output", {}), indent=2), language="json")
+            if st.session_state.get("show_raw_json"):
+                st.subheader("System Output (JSON)")
+                st.code(json.dumps(st.session_state.get("system_output", {}), indent=2), language="json")
 
         else:
             st.markdown("---")

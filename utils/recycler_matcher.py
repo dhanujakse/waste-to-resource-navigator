@@ -118,6 +118,12 @@ def match_recyclers(
         rates = r.get("rates", {})
         if target_material in rates:
             rate = rates.get(target_material)
+        elif rates:
+            # Fallback to best available rate for display if exact match not found
+            try:
+                rate = max(rates.values())
+            except Exception:
+                rate = list(rates.values())[0]
 
         loc = r.get("location", {})
         results.append({

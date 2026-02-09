@@ -1,8 +1,7 @@
 streamlit
 langchain
 openai
-google-generativeai
-langchain-google-genai
+langchain-openai
 langchain-pinecone
 pinecone
 python-dotenv

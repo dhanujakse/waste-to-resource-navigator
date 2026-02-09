@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv
 from langchain_pinecone import PineconeVectorStore
-from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-from utils.gemini_config import get_gemini_model_name, is_strict_genai
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from utils.openrouter_config import get_openrouter_model_text, get_openrouter_embedding_model, is_strict_genai
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
 from langchain_core.output_parsers import StrOutputParser
@@ -19,10 +19,11 @@ class LegalComplianceRAG:
     
     def __init__(self):
         # Initialize Gemini LLM
-        self.llm = ChatGoogleGenerativeAI(
-            model=get_gemini_model_name(),
+        self.llm = ChatOpenAI(
+            model=get_openrouter_model_text(),
             temperature=0,
-            google_api_key=os.getenv("GOOGLE_API_KEY")
+            api_key=os.getenv("OPENROUTER_API_KEY"),
+            base_url=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
         )
         self.strict = is_strict_genai()
         
@@ -30,9 +31,13 @@ class LegalComplianceRAG:
         self.use_rag = False
         try:
             self.index_name = os.getenv("PINECONE_INDEX_NAME", "cpcb-waste-rules")
-            self.embeddings = GoogleGenerativeAIEmbeddings(
-                model="models/embedding-001", 
-                google_api_key=os.getenv("GOOGLE_API_KEY")
+            embedding_model = get_openrouter_embedding_model()
+            if not embedding_model:
+                raise Exception("OPENROUTER_EMBEDDING_MODEL not set")
+            self.embeddings = OpenAIEmbeddings(
+                model=embedding_model,
+                api_key=os.getenv("OPENROUTER_API_KEY"),
+                base_url=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
             )
             
             self.vectorstore = PineconeVectorStore.from_existing_index(
@@ -134,10 +139,10 @@ class LegalComplianceRAG:
             # Check for Rate Limit (429) or other API errors
             error_str = str(e)
             if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
-                print(f"⚠️ Legal RAG Rate Limit Hit: {e}")
+                print(f"⚠️ Legal RAG Rate Limit/Quota Hit: {e}")
                 
                 # FALLBACK: Static rule-based response for demo continuity
-                return self._get_static_compliance_fallback(material_type)
+                raise RuntimeError("Legal RAG fallback disabled in strict GenAI mode.")
             
             return {
                 "material_type": material_type,
